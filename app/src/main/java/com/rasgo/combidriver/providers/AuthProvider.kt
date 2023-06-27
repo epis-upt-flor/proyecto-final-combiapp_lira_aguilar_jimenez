@@ -6,25 +6,31 @@ import com.google.firebase.auth.FirebaseAuth
 
 class AuthProvider {
 
-    val auth: FirebaseAuth=FirebaseAuth.getInstance()
+    val auth: FirebaseAuth = FirebaseAuth.getInstance()
 
-    fun login(email: String, password: String ): Task<AuthResult> {
+    fun login(email: String, password: String): Task<AuthResult> {
         return auth.signInWithEmailAndPassword(email, password)
     }
 
-    fun register(email: String, password:String): Task <AuthResult>{
+    fun register(email: String, password: String): Task<AuthResult> {
         return auth.createUserWithEmailAndPassword(email, password)
     }
 
-    fun getId(): String{
+    fun getId(): String {
+        // NULL POINTER EXCEPTION
         return auth.currentUser?.uid ?: ""
     }
 
     fun existSession(): Boolean {
         var exist = false
-        if (auth.currentUser!=null) {
+        if (auth.currentUser != null) {
             exist = true
         }
         return exist
     }
+
+    fun logout() {
+        auth.signOut()
+    }
+
 }
