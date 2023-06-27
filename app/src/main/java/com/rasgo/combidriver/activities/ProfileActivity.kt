@@ -10,7 +10,6 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import com.bumptech.glide.Glide
 import com.github.dhaval2404.imagepicker.ImagePicker
-import com.google.protobuf.Empty
 import com.rasgo.combidriver.databinding.ActivityProfileBinding
 import com.rasgo.combidriver.models.Driver
 import com.rasgo.combidriver.providers.AuthProvider

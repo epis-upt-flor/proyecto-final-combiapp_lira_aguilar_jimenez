@@ -18,4 +18,14 @@
 
         <!-- Customize your theme here. -->
     </style>
+    <style name="EditTextGrey" parent="TextAppearance.AppCompat">
+        <item name="colorControlNormal">@color/orange</item>
+        <item name="colorControlActivated">@color/orange</item>
+        <item name="colorControlHighlight">@color/orange</item>
+        <item name="android:textColorHint">@color/orange</item>
+        <item name="colorAccent">@color/orange</item>
+        <item name="android:textColorPrimary">@color/orange</item>
+        <item name="colorSecondary">@color/orange</item>
+        <item name="colorOnPrimary">@color/orange</item>
+    </style>
 </resources>

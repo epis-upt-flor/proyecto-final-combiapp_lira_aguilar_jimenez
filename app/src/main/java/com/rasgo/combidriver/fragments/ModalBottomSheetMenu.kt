@@ -1,26 +1,18 @@
 package com.rasgo.combidriver.fragments
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.google.firebase.firestore.ktx.toObject
 import com.rasgo.combidriver.R
 import com.rasgo.combidriver.activities.*
-import com.rasgo.combidriver.models.Booking
 import com.rasgo.combidriver.models.Driver
 import com.rasgo.combidriver.providers.AuthProvider
-import com.rasgo.combidriver.providers.BookingProvider
 import com.rasgo.combidriver.providers.DriverProvider
-import com.rasgo.combidriver.providers.GeoProvider
 
 class ModalBottomSheetMenu: BottomSheetDialogFragment() {
 
@@ -53,7 +45,7 @@ class ModalBottomSheetMenu: BottomSheetDialogFragment() {
     }
 
     private fun goToProfile() {
-        val i = Intent(activity, ProfileActivity::class.java)
+        val i = Intent(activity, ProfileActivityB::class.java)
         startActivity(i)
     }
 
