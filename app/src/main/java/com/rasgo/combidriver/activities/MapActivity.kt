@@ -325,7 +325,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener, SensorEve
     }
 
     private fun addDirectionMarker(latLng: LatLng, angle: Int)  {
-        val circleDrawable = ContextCompat.getDrawable(applicationContext, R.drawable.icons8_Slide_Up_64px)
+        val circleDrawable = ContextCompat.getDrawable(applicationContext, R.drawable.icons_slide_up_64px)
         val markerIcon = getMarkerFromDrawable(circleDrawable!!)
         if (markerDriver != null) {
             markerDriver?.remove()

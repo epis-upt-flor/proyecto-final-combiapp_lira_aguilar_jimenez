@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import com.bumptech.glide.Glide
-import com.rasgo.combidriver.databinding.ActivityHistoryDetailBinding
+import com.rasgo.combidriver.databinding.ActivityHistoriesDetailBinding
 import com.rasgo.combidriver.models.Client
 import com.rasgo.combidriver.models.History
 import com.rasgo.combidriver.providers.ClientProvider
@@ -12,13 +12,13 @@ import com.rasgo.combidriver.providers.HistoryProvider
 import com.rasgo.combidriver.utils.RelativeTime
 
 class HistoriesDetailActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityHistoryDetailBinding
+    private lateinit var binding: ActivityHistoriesDetailBinding
     private var historyProvider = HistoryProvider()
     private var clientProvider = ClientProvider()
     private var extraId = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHistoryDetailBinding.inflate(layoutInflater)
+        binding = ActivityHistoriesDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
         window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
@@ -37,8 +37,8 @@ class HistoriesDetailActivity : AppCompatActivity() {
                 binding.textViewDestination.text = history?.destination
                 binding.textViewDate.text = RelativeTime.getTimeAgo(history?.timestamp!!, this@HistoriesDetailActivity)
                 binding.textViewPrice.text = "${String.format("%.1f", history?.price)}$"
-                binding.textViewMyCalification.text = "${history?.calificationToDriver}"
-                binding.textViewClientCalification.text = "${history?.calificationToClient}"
+//                binding.textViewMyCalification.text = "${history?.calificationToDriver}"
+//                binding.textViewClientCalification.text = "${history?.calificationToClient}"
                 binding.textViewTimeAndDistance.text = "${history?.time} Min - ${String.format("%.1f", history?.km)} Km"
                 getClientInfo(history?.idClient!!)
             }

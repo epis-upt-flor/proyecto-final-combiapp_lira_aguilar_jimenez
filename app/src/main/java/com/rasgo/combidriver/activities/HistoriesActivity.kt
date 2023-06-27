@@ -4,7 +4,6 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.rasgo.combidriver.R
 import com.rasgo.combidriver.adapters.HistoriesAdapter
 import com.rasgo.combidriver.databinding.ActivityHistoriesBinding
 import com.rasgo.combidriver.models.History
