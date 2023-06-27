@@ -9,11 +9,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.rasgo.combidriver.R
 import com.rasgo.combidriver.activities.MapActivity
-import com.rasgo.combidriver.activities.MapTripActivity
+import com.rasgo.combidriver.activities.MapTripActivityB
 import com.rasgo.combidriver.models.Booking
 import com.rasgo.combidriver.providers.AuthProvider
 import com.rasgo.combidriver.providers.BookingProvider
@@ -84,7 +83,7 @@ class ModalBottomSheetBooking: BottomSheetDialogFragment() {
     }
 
     private fun goToMapTrip() {
-        val i = Intent(context, MapTripActivity::class.java)
+        val i = Intent(context, MapTripActivityB::class.java)
         i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         context?.startActivity(i)
     }

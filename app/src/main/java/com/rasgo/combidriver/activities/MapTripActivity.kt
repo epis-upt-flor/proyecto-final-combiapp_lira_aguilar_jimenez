@@ -22,7 +22,6 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.bumptech.glide.Glide
 import com.example.easywaylocation.EasyWayLocation
 import com.example.easywaylocation.Listener
 import com.example.easywaylocation.draw_path.DirectionUtil
@@ -36,9 +35,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
 import com.google.firebase.firestore.ListenerRegistration
 import com.rasgo.combidriver.R
-import com.rasgo.combidriver.databinding.ActivityMapBinding
 import com.rasgo.combidriver.databinding.ActivityMapTripBinding
-import com.rasgo.combidriver.fragments.ModalBottomSheetBooking
 import com.rasgo.combidriver.fragments.ModalBottomSheetTripInfo
 import com.rasgo.combidriver.models.*
 import com.rasgo.combidriver.providers.*
@@ -277,7 +274,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
         wayPoints.add(myLocationLatLng!!)
         wayPoints.add(position)
         directionUtil = DirectionUtil.Builder()
-            .setDirectionKey(resources.getString(R.string.google_maps_key))
+            .setDirectionKey(resources.getString(R.string.app_maps_key))
             .setOrigin(myLocationLatLng!!)
             .setWayPoints(wayPoints)
             .setGoogleMap(googleMap!!)
@@ -292,14 +289,14 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
     }
 
     private fun addOriginMarker(position: LatLng) {
-        markerOrigin = googleMap?.addMarker(MarkerOptions().position(position).title("Recoger aqui")
-            .icon(BitmapDescriptorFactory.fromResource(R.drawable.icons_location_person)))
+        markerOrigin = googleMap?.addMarker(MarkerOptions().position(position).title("Recoger aquí")
+            .icon(BitmapDescriptorFactory.fromResource(R.drawable.icons8_user_location_64px)))
     }
 
     private fun addDestinationMarker() {
         if (destinationLatLng != null) {
-            markerDestination = googleMap?.addMarker(MarkerOptions().position(destinationLatLng!!).title("Recoger aqui")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.icons_pin)))
+            markerDestination = googleMap?.addMarker(MarkerOptions().position(destinationLatLng!!).title("Recoger aquí")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.icons8_map_pin_64px)))
         }
     }
 
@@ -323,7 +320,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
     }
 
     private fun addMarker() {
-        val drawable = ContextCompat.getDrawable(applicationContext, R.drawable.uber_car)
+        val drawable = ContextCompat.getDrawable(applicationContext, R.drawable.icon_combi_y)
         val markerIcon = getMarkerFromDrawable(drawable!!)
         if (markerDriver != null) {
             markerDriver?.remove() // NO REDIBUJAR EL ICONO
@@ -539,7 +536,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
     }
 
     private fun addDirectionMarker(latLng: LatLng, angle: Int)  {
-        val circleDrawable = ContextCompat.getDrawable(applicationContext, R.drawable.ic_up_arrow_circle)
+        val circleDrawable = ContextCompat.getDrawable(applicationContext, R.drawable.icons_slide_up_64px)
         val markerIcon = getMarkerFromDrawable(circleDrawable!!)
         if (markerDriver != null) {
             markerDriver?.remove()

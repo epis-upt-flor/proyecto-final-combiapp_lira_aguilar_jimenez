@@ -6,10 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
-import com.google.firebase.firestore.ktx.toObject
-import com.rasgo.combidriver.R
 import com.rasgo.combidriver.databinding.ActivityCalificationClientBinding
-import com.rasgo.combidriver.databinding.ActivityMapTripBinding
 import com.rasgo.combidriver.models.History
 import com.rasgo.combidriver.providers.HistoryProvider
 
@@ -22,7 +19,7 @@ class CalificationClientActivity : AppCompatActivity() {
     private var calification = 0f
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+/*    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCalificationClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -53,7 +50,7 @@ class CalificationClientActivity : AppCompatActivity() {
                 goToMap()
             }
             else {
-                Toast.makeText(this@CalificationClientActivity, "Error al actualizar la calificacion", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@CalificationClientActivityB, "Error al actualizar la calificacion", Toast.LENGTH_LONG).show()
             }
         }
     }
@@ -83,5 +80,5 @@ class CalificationClientActivity : AppCompatActivity() {
 
             }
         }
-    }
+    }*/
 }
