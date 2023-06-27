@@ -29,8 +29,8 @@ import com.google.android.gms.maps.model.*
 import com.google.firebase.firestore.ListenerRegistration
 import com.rasgo.combidriver.R
 import com.rasgo.combidriver.databinding.ActivityMapBinding
-import com.rasgo.combidriver.fragments.ModalBottomSheetBookingB
-import com.rasgo.combidriver.fragments.ModalBottomSheetMenuB
+import com.rasgo.combidriver.fragments.ModalBottomSheetBooking
+import com.rasgo.combidriver.fragments.ModalBottomSheetMenu
 import com.rasgo.combidriver.models.Booking
 import com.rasgo.combidriver.providers.*
 
@@ -48,8 +48,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener, SensorEve
     private val bookingProvider = BookingProvider()
     private val driverProvider = DriverProvider()
     private val notificationProvider = NotificationProvider()
-    private val modalBooking = ModalBottomSheetBookingB()
-    private val modalMenu = ModalBottomSheetMenuB()
+    private val modalBooking = ModalBottomSheetBooking()
+    private val modalMenu = ModalBottomSheetMenu()
 
     // SENSOR CAMERA
     private var angle = 0
@@ -139,7 +139,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener, SensorEve
     }
 
     private fun showModalMenu() {
-        modalMenu.show(supportFragmentManager, ModalBottomSheetMenuB.TAG)
+        modalMenu.show(supportFragmentManager, ModalBottomSheetMenu.TAG)
     }
 
     private fun showModalBooking(booking: Booking) {
@@ -148,7 +148,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener, SensorEve
         bundle.putString("booking", booking.toJson())
         modalBooking.arguments = bundle
         modalBooking.isCancelable = false // NO PUEDA OCULTAR EL MODAL BOTTTOM SHEET
-        modalBooking.show(supportFragmentManager, ModalBottomSheetBookingB.TAG)
+        modalBooking.show(supportFragmentManager, ModalBottomSheetBooking.TAG)
         timer.start()
     }
 

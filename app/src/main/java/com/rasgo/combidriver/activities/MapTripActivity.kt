@@ -36,7 +36,7 @@ import com.google.android.gms.maps.model.*
 import com.google.firebase.firestore.ListenerRegistration
 import com.rasgo.combidriver.R
 import com.rasgo.combidriver.databinding.ActivityMapTripBinding
-import com.rasgo.combidriver.fragments.ModalBottomSheetTripInfoB
+import com.rasgo.combidriver.fragments.ModalBottomSheetTripInfo
 import com.rasgo.combidriver.models.*
 import com.rasgo.combidriver.providers.*
 import retrofit2.Call
@@ -85,7 +85,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
     private var isStartedTrip = false
 
     // MODAL
-    private var modalTrip = ModalBottomSheetTripInfoB()
+    private var modalTrip = ModalBottomSheetTripInfo()
 
     // SENSOR CAMERA
     private var angle = 0
@@ -225,10 +225,10 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
             val bundle = Bundle()
             bundle.putString("booking", booking?.toJson())
             modalTrip.arguments = bundle
-            modalTrip.show(supportFragmentManager, ModalBottomSheetTripInfoB.TAG)
+            modalTrip.show(supportFragmentManager, ModalBottomSheetTripInfo.TAG)
         }
         else {
-            Toast.makeText(this, "No se pudo cargar la informacion", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "No se pudo cargar la información", Toast.LENGTH_SHORT).show()
         }
     }
 

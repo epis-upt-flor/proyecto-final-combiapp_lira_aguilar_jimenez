@@ -317,7 +317,7 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/icons8_donate_64px_mg" />
+                android:src="@drawable/icons8_Donate_64px_mg" />
 
             <LinearLayout
                 android:layout_width="wrap_content"

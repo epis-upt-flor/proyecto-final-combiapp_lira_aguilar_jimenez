@@ -65,7 +65,7 @@ class ModalBottomSheetMenu: BottomSheetDialogFragment() {
         driverProvider.getDriver(authProvider.getId()).addOnSuccessListener { document ->
             if (document.exists()) {
                 val driver = document.toObject(Driver::class.java)
-                textViewUsername?.text = "${driver?.name} ${driver?.lastname}"
+                textViewUsername?.text = "${driver?.name}"
             }
         }
     }
