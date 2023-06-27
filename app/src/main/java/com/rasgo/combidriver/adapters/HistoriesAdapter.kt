@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.rasgo.combidriver.R
-import com.rasgo.combidriver.activities.HistoriesDetailActivityB
+import com.rasgo.combidriver.activities.HistoriesDetailActivity
 import com.rasgo.combidriver.models.History
 import com.rasgo.combidriver.utils.RelativeTime
 
@@ -34,7 +34,7 @@ class HistoriesAdapter(val context: Activity, val histories: ArrayList<History>)
     }
 
     private fun goToDetail(idHistory: String) {
-        val i = Intent(context, HistoriesDetailActivityB::class.java)
+        val i = Intent(context, HistoriesDetailActivity::class.java)
         i.putExtra("id", idHistory)
         context.startActivity(i)
     }
