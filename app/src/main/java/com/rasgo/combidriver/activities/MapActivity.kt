@@ -226,7 +226,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener, SensorEve
     }
 
     private fun addMarker() {
-        val drawable = ContextCompat.getDrawable(applicationContext, R.drawable.uber_car)
+        val drawable = ContextCompat.getDrawable(applicationContext, R.drawable.icon_combi_y)
         val markerIcon = getMarkerFromDrawable(drawable!!)
         if (markerDriver != null) {
             markerDriver?.remove() // NO REDIBUJAR EL ICONO
@@ -325,7 +325,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener, SensorEve
     }
 
     private fun addDirectionMarker(latLng: LatLng, angle: Int)  {
-        val circleDrawable = ContextCompat.getDrawable(applicationContext, R.drawable.ic_up_arrow_circle)
+        val circleDrawable = ContextCompat.getDrawable(applicationContext, R.drawable.icons8_Slide_Up_64px)
         val markerIcon = getMarkerFromDrawable(circleDrawable!!)
         if (markerDriver != null) {
             markerDriver?.remove()
