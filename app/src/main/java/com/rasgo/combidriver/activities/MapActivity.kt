@@ -1,7 +1,6 @@
 package com.rasgo.combidriver.activities
 
 import android.Manifest
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Resources
 import android.graphics.Bitmap
@@ -15,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
-import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -31,15 +29,10 @@ import com.google.android.gms.maps.model.*
 import com.google.firebase.firestore.ListenerRegistration
 import com.rasgo.combidriver.R
 import com.rasgo.combidriver.databinding.ActivityMapBinding
-import com.rasgo.combidriver.fragments.ModalBottomSheetBooking
-import com.rasgo.combidriver.fragments.ModalBottomSheetMenu
+import com.rasgo.combidriver.fragments.ModalBottomSheetBookingB
+import com.rasgo.combidriver.fragments.ModalBottomSheetMenuB
 import com.rasgo.combidriver.models.Booking
-import com.rasgo.combidriver.models.FCMBody
-import com.rasgo.combidriver.models.FCMResponse
 import com.rasgo.combidriver.providers.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener, SensorEventListener {
 
@@ -55,8 +48,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener, SensorEve
     private val bookingProvider = BookingProvider()
     private val driverProvider = DriverProvider()
     private val notificationProvider = NotificationProvider()
-    private val modalBooking = ModalBottomSheetBooking()
-    private val modalMenu = ModalBottomSheetMenu()
+    private val modalBooking = ModalBottomSheetBookingB()
+    private val modalMenu = ModalBottomSheetMenuB()
 
     // SENSOR CAMERA
     private var angle = 0
@@ -146,7 +139,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener, SensorEve
     }
 
     private fun showModalMenu() {
-        modalMenu.show(supportFragmentManager, ModalBottomSheetMenu.TAG)
+        modalMenu.show(supportFragmentManager, ModalBottomSheetMenuB.TAG)
     }
 
     private fun showModalBooking(booking: Booking) {
@@ -155,7 +148,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener, SensorEve
         bundle.putString("booking", booking.toJson())
         modalBooking.arguments = bundle
         modalBooking.isCancelable = false // NO PUEDA OCULTAR EL MODAL BOTTTOM SHEET
-        modalBooking.show(supportFragmentManager, ModalBottomSheetBooking.TAG)
+        modalBooking.show(supportFragmentManager, ModalBottomSheetBookingB.TAG)
         timer.start()
     }
 

@@ -45,12 +45,12 @@ class ModalBottomSheetMenu: BottomSheetDialogFragment() {
     }
 
     private fun goToProfile() {
-        val i = Intent(activity, ProfileActivityB::class.java)
+        val i = Intent(activity, ProfileActivity::class.java)
         startActivity(i)
     }
 
     private fun goToHistories() {
-        val i = Intent(activity, HistoriesActivityB::class.java)
+        val i = Intent(activity, HistoriesActivity::class.java)
         startActivity(i)
     }
 

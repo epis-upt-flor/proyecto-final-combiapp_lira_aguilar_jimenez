@@ -1,12 +1,10 @@
 package com.rasgo.combidriver.fragments
 
 import android.Manifest
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,12 +12,10 @@ import android.widget.*
 import androidx.core.app.ActivityCompat
 import com.bumptech.glide.Glide
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.google.firebase.firestore.ktx.toObject
 import com.rasgo.combidriver.R
 import com.rasgo.combidriver.activities.*
 import com.rasgo.combidriver.models.Booking
 import com.rasgo.combidriver.models.Client
-import com.rasgo.combidriver.models.Driver
 import com.rasgo.combidriver.providers.*
 import de.hdodenhof.circleimageview.CircleImageView
 
