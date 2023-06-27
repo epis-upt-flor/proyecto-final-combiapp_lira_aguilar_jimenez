@@ -63,7 +63,7 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textFieldNombre"
+                    android:id="@+id/textFieldName"
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
                     android:hint="Nombre"
@@ -90,7 +90,7 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textFieldTelefono"
+                    android:id="@+id/textFieldPhone"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:hint="Teléfono"
