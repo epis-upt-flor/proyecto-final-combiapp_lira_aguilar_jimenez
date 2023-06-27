@@ -20,10 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        )
+        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+
 
         binding.btnRegister.setOnClickListener { goToRegister() }
         binding.btnLogin.setOnClickListener { login() }
@@ -37,13 +35,10 @@ class MainActivity : AppCompatActivity() {
             authProvider.login(email, password).addOnCompleteListener {
                 if (it.isSuccessful) {
                     goToMap()
-                } else {
-                    Toast.makeText(
-                        this@MainActivity,
-                        "Error de Inicio de Sesión",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    Log.d("FIREBASE", "Error de Inicio de Sesión: ${it.exception.toString()}")
+                }
+                else {
+                    Toast.makeText(this@MainActivity, "Error iniciando sesion", Toast.LENGTH_SHORT).show()
+                    Log.d("FIREBASE", "ERROR: ${it.exception.toString()}")
                 }
             }
         }
@@ -58,13 +53,15 @@ class MainActivity : AppCompatActivity() {
     private fun isValidForm(email: String, password: String): Boolean {
 
         if (email.isEmpty()) {
-            Toast.makeText(this, "Ingresa tu correo electrónico", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Ingresa tu correo electronico", Toast.LENGTH_SHORT).show()
             return false
         }
+
         if (password.isEmpty()) {
-            Toast.makeText(this, "Ingresa una contraseña", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Ingresa tu contraseña", Toast.LENGTH_SHORT).show()
             return false
         }
+
         return true
     }
 
@@ -79,4 +76,5 @@ class MainActivity : AppCompatActivity() {
             goToMap()
         }
     }
+
 }
