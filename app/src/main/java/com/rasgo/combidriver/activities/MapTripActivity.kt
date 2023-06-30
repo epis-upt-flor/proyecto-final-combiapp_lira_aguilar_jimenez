@@ -278,7 +278,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
             .setOrigin(myLocationLatLng!!)
             .setWayPoints(wayPoints)
             .setGoogleMap(googleMap!!)
-            .setPolyLinePrimaryColor(R.color.black)
+            .setPolyLinePrimaryColor(R.color.green)
             .setPolyLineWidth(12)
             .setPathAnimation(true)
             .setCallback(this)

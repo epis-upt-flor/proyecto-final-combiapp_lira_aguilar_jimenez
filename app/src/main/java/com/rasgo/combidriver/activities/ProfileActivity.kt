@@ -40,7 +40,7 @@ class ProfileActivity : AppCompatActivity() {
     private fun updateInfo() {
 
         val name = binding.textFieldName.text.toString()
-        val lastname = binding.textFieldLastname.text.toString()
+        //val lastname = binding.textFieldLastname.text.toString()
         val phone = binding.textFieldPhone.text.toString()
         val carBrand = binding.textFieldCarBrand.text.toString()
         val carColor = binding.textFieldCarColor.text.toString()
@@ -49,7 +49,7 @@ class ProfileActivity : AppCompatActivity() {
         val driver = Driver(
             id = authProvider.getId(),
             name = name,
-            lastname = lastname,
+            //lastname = lastname,
             phone = phone,
             colorCar = carColor,
             brandCar = carBrand,
@@ -93,7 +93,7 @@ class ProfileActivity : AppCompatActivity() {
                 val driver = document.toObject(Driver::class.java)
                 binding.textViewEmail.text = driver?.email
                 binding.textFieldName.setText(driver?.name)
-                binding.textFieldLastname.setText(driver?.lastname)
+                //binding.textFieldLastname.setText(driver?.lastname)
                 binding.textFieldPhone.setText(driver?.phone)
                 binding.textFieldCarBrand.setText(driver?.brandCar)
                 binding.textFieldCarColor.setText(driver?.colorCar)

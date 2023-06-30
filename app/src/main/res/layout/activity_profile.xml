@@ -49,7 +49,7 @@
             android:id="@+id/textViewEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="correo electrónico"
+            android:text="Correo electrónico"
             android:textColor="@color/white"
             android:layout_gravity="bottom"
             android:gravity="center"
@@ -79,9 +79,9 @@
             app:boxBackgroundColor="@color/greymedium"
 
             style="@style/EditTextGrey"
-            app:hintTextColor="@color/orange"
+            app:hintTextColor="@color/white"
             app:startIconDrawable="@drawable/icons8_user_24px"
-            app:startIconTint="@color/orange">
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textFieldName"
@@ -96,7 +96,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <com.google.android.material.textfield.TextInputLayout
+        <!--<com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -105,22 +105,22 @@
             app:boxBackgroundColor="@color/greymedium"
 
             style="@style/EditTextGrey"
-            app:hintTextColor="@color/orange"
+            app:hintTextColor="@color/white"
             app:startIconDrawable="@drawable/icons8_user_24px"
-            app:startIconTint="@color/orange">
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textFieldLastname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Apellido"
-                android:textColorHint="@color/orange"
+                android:textColorHint="@color/white"
                 android:inputType="text"
                 android:textSize="13sp"
                 android:textColor="@color/yellow"
                 />
 
-        </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>-->
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -131,16 +131,16 @@
             app:boxBackgroundColor="@color/greymedium"
 
             style="@style/EditTextGrey"
-            app:hintTextColor="@color/orange"
+            app:hintTextColor="@color/white"
             app:startIconDrawable="@drawable/icons8_phone_24px"
-            app:startIconTint="@color/orange">
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textFieldPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Teléfono"
-                android:textColorHint="@color/orange"
+                android:textColorHint="@color/white"
                 android:inputType="phone"
                 android:textSize="13sp"
                 android:textColor="@color/yellow" />
@@ -156,16 +156,16 @@
             app:boxBackgroundColor="@color/greymedium"
 
             style="@style/EditTextGrey"
-            app:hintTextColor="@color/orange"
+            app:hintTextColor="@color/white"
             app:startIconDrawable="@drawable/icons8_shuttle_bus_24px"
-            app:startIconTint="@color/orange">
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textFieldCarBrand"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Marca del vehiculo"
-                android:textColorHint="@color/orange"
+                android:textColorHint="@color/white"
                 android:inputType="text"
                 android:textSize="13sp"
                 android:textColor="@color/yellow" />
@@ -181,16 +181,16 @@
             app:boxBackgroundColor="@color/greymedium"
 
             style="@style/EditTextGrey"
-            app:hintTextColor="@color/orange"
+            app:hintTextColor="@color/white"
             app:startIconDrawable="@drawable/icons8_paint_roller_24px"
-            app:startIconTint="@color/orange">
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textFieldCarColor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Color del vehiculo"
-                android:textColorHint="@color/orange"
+                android:textColorHint="@color/white"
                 android:inputType="text"
                 android:textSize="13sp"
                 android:textColor="@color/yellow" />
@@ -205,16 +205,16 @@
             android:layout_marginTop="5dp"
             app:boxBackgroundColor="@color/greymedium"
             style="@style/EditTextGrey"
-            app:hintTextColor="@color/orange"
+            app:hintTextColor="@color/white"
             app:startIconDrawable="@drawable/icons8_bus_24px"
-            app:startIconTint="@color/orange">
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textFieldCarPlate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Placa del vehiculo"
-                android:textColorHint="@color/orange"
+                android:textColorHint="@color/white"
                 android:inputType="text"
                 android:textSize="13sp"
                 android:textColor="@color/yellow" />

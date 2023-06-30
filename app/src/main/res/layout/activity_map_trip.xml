@@ -43,7 +43,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tiempo transcurrido: "
-                    android:textColor="@color/black"
+                    android:textColor="@color/yellow"
                     android:textStyle="bold"
                     android:textSize="18sp"
                     />
@@ -53,7 +53,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
-                    android:textColor="@color/black"
+                    android:textColor="@color/yellow"
                     android:textStyle="bold"
                     android:textSize="18sp"
                     />
@@ -71,7 +71,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Distancia total: "
-                    android:textColor="@color/black"
+                    android:textColor="@color/yellow"
                     android:textStyle="bold"
                     android:textSize="18sp"
                     />
@@ -81,7 +81,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0 Km"
-                    android:textColor="@color/black"
+                    android:textColor="@color/yellow"
                     android:textStyle="bold"
                     android:textSize="18sp"
                     />
@@ -110,7 +110,7 @@
         android:id="@+id/btnFinishTrip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="BAJE BAJE"
+        android:text="BAJA BAJA"
         android:background="@drawable/rounded_button"
         app:backgroundTint="@color/green"
         android:layout_gravity="bottom"
