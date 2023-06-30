@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "750330794988",
+    "project_id": "combiuser-b84cd",
+    "storage_bucket": "combiuser-b84cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750330794988:android:94af2260a38a42539c26c9",
+        "android_client_info": {
+          "package_name": "com.rasgo.combiuser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "750330794988-8f2tl7vhh74i085d7tjsa3bsqjldp3pi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuTA60y-zbiwDPY4qB-qxMdw3TeSnvAnM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "750330794988-8f2tl7vhh74i085d7tjsa3bsqjldp3pi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

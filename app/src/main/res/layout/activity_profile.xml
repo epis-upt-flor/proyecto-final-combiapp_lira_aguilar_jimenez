@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProfileActivity">
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="250dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/magenta" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PERFIL DE USUARIO"
+        android:textAlignment="center"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:id="@+id/imageViewBack"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/icons8_back_to_64px"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageProfile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/user512"
+        app:civ_border_width="3dp"
+        app:civ_border_color="@color/white"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="45dp"/>
+
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Correo electrónico"
+        android:textColor="@color/white"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"/>
+
+  </FrameLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:layout_marginTop="250dp"
+      android:background="@color/greyblack"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        app:boxBackgroundColor="@color/greymedium"
+
+        style="@style/EditTextGrey"
+        app:hintTextColor="@color/white"
+        app:startIconDrawable="@drawable/icons8_user_24px"
+        app:startIconTint="@color/white">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/textFieldName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Nombre"
+          android:inputType="text"
+          android:textColor="@color/yellow"
+          android:textColorHint="@color/yellow"
+          android:textSize="13sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--<com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        app:boxBackgroundColor="@color/greymedium"
+
+        style="@style/EditTextGrey"
+        app:hintTextColor="@color/white"
+        app:startIconDrawable="@drawable/icons8_user_24px"
+        app:startIconTint="@color/white">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/textFieldLastname"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Apellido"
+          android:textColorHint="@color/white"
+          android:inputType="text"
+          android:textSize="13sp"
+          android:textColor="@color/yellow"
+          />
+
+    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        app:boxBackgroundColor="@color/greymedium"
+
+        style="@style/EditTextGrey"
+        app:hintTextColor="@color/white"
+        app:startIconDrawable="@drawable/icons8_phone_24px"
+        app:startIconTint="@color/white">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/textFieldPhone"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Teléfono"
+          android:textColorHint="@color/white"
+          android:inputType="phone"
+          android:textSize="13sp"
+          android:textColor="@color/yellow" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+  </LinearLayout>
+
+
+  <Button
+      android:id="@+id/btnUpdate"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="30dp"
+      android:layout_marginLeft="30dp"
+      android:text="ACTUALIZAR INFORMACION"
+      android:layout_marginBottom="50dp"
+      android:layout_gravity="bottom"
+      android:background="@drawable/rounded_button"
+      />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
