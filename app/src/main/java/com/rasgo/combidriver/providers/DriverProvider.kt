@@ -59,7 +59,7 @@ class DriverProvider {
     fun update(driver: Driver): Task<Void> {
         val map: MutableMap<String, Any> = HashMap()
         map["name"] = driver?.name!!
-        map["lastname"] = driver?.lastname!!
+//        map["lastname"] = driver?.lastname!!
         map["phone"] = driver?.phone!!
         map["brandCar"] = driver?.brandCar!!
         map["colorCar"] = driver?.colorCar!!

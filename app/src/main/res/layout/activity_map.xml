@@ -37,7 +37,7 @@
         android:id="@+id/btnDisconnect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Deconectarse"
+        android:text="Desconectarse"
         android:background="@drawable/rounded_button"
         app:backgroundTint="@color/orange"
         android:layout_gravity="bottom"
